@@ -5,6 +5,12 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
+// ARC Tutorials
+
+// 1. Class
+// 2. Class Inheritance with super();
+
+
 class Data {
   constructor(name, age) {
     this.name = name;
@@ -16,5 +22,15 @@ class Data {
   }
 }
 
-let car = new Data('shourya', '4');
+class subData extends Data {
+  // getChildName(){
+  //   console.log(`This is Child ${this.name}, and he is ${this.age} months old`);
+  // }
+
+  getName() {
+    super.getName();
+  }
+}
+
+let car = new subData('shourya', '4');
 car.getName();
