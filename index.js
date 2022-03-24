@@ -23,12 +23,13 @@ class Data {
 }
 
 class subData extends Data {
-  // getChildName(){
-  //   console.log(`This is Child ${this.name}, and he is ${this.age} months old`);
-  // }
+  getChildName(){
+    console.log(`This is Child ${this.name}, and he is ${this.age} months old`);
+  }
 
   getName() {
     super.getName();
+    this.getChildName();
   }
 }
 
